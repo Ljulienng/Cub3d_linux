@@ -52,7 +52,7 @@ static int		main2(int ac, char **av, t_map *map)
 		main_game(map, 0);
 	if (ac == 3 && !ft_strncmp(av[2], "--save", 7))
 	{
-		lst_malloc((void **)&map, sizeof(t_map), map);
+		map = ft_calloc(1, sizeof(t_map));
 		init(map);
 		init_map(av[1], map);
 		setup_mlx(map);
